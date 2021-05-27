@@ -1,0 +1,399 @@
+/* Font */
+@font-face {
+  font-family: Apex;
+  src: url('src/Apex Mk2/ApexMk2-BoldExtended.otf')
+}
+@font-face {
+  font-family: Apex_Light;
+  src: url('src/Apex Mk2/ApexMk2-LightCondensed.otf')
+}
+
+/* Header */
+#blackBar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
+#topBarTitle{
+  color: rgba(147,105,255,100);
+  margin-left: 35px;
+  position: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Apex;
+  margin-top: 25px;
+
+}
+
+
+
+/* Cards */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/20px "Lato", Apex_Light, sans-serif;
+  color: #9e9e9e;
+}
+
+#gradient
+{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px #ffffff;
+}
+
+.clash-card__image {
+  position: center;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+
+.clash-card__image--barbarian {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbackgroundcheckall.com%2Fwp-content%2Fuploads%2F2017%2F12%2Fpokemon-background-battle-9.png&f=1&nofb=1");
+  background-position: bottom;
+  background-size: 400px;
+}
+
+
+.get-data img{
+  height: 250px;
+  margin-left: 20px;
+
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: #9369ff;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.clash-card__unit-stats--barbarian {
+  background: #9369ff;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 2px solid #ffffff;
+}
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.clash-card__unit-stats .one-third {
+  width: 25%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+
+
+
+/*Overview Stats Elements*/
+
+
+.gen-table {
+  width: 200px;
+}
+
+.element-card {
+  background: white;
+  width: 300px;
+  border-radius: 19px;
+  box-shadow: -1px 15px 30px -12px #ffffff;
+}
+
+.element-card__unit-stats {
+  color: #ffffff;
+  font-weight: 100;
+}
+
+.borderBottom{
+  border-bottom: 1.5px solid #ffffff;
+
+}
+
+.element {
+  text-align: left;
+  margin-left: 8px;
+}
+
+.prozentSatz {
+  text-align: right;
+  margin-left: 10px;
+}
+
+.element-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.element-card__level--barbarian {
+  color: #9369ff;
+}
+.element-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.element-card_color {
+  background: #9369ff;
+}
+
+.wrapperElements {
+  width: 300px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #ffffff;
+  overflow: hidden; /* add this to contain floated children */
+}
+.first {
+  width: 30px;
+  float:left; /* add this */
+  /*border: 1px solid red;*/
+}
+.second {
+  width: 210px;
+  /*border: 1px solid green;*/
+  float: left; /* add this */
+}
+
+.third {
+  width: 20px;
+  /*border: 1px solid blue;*/
+  float: left; /* add this */
+}
+
+.element-card_color2 {
+  background: #ae3cff;
+}
+
+.element-card__unit-stats_last {
+  color: #ffffff;
+  font-weight: 100;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+.iconElements {
+  height: 15px;
+  width: 15px;
+  position: center;
+}
+
+.iconElementsBarchart {
+  height: 25px;
+  width: 25px;
+}
+
+/* Barchart */
+.barchart-container {
+  width: 750px;
+  height: 700px;
+  /*border: 1px solid black;*/
+  display: flex;
+  flex-direction: column;
+}
+
+/*Make Card from these*/
+.bar-container {
+  width: 750px;
+  height: 60px;
+  /*border: 1px solid green;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bar-logo {
+  width: 25px;
+  height: 25px;
+  /*border: 1px solid red;*/
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.bar-comparison-container {
+  width: 600px;
+  height: 30px;
+  /*border: 1px solid blue;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bar {
+  position: relative;
+  background-color: #ae3cff;
+  width: 150px;
+  height: 5px;
+  /*border: 1px solid rgb(0, 255, 76);*/
+
+}
+
+/* .bar::after {
+  content: '';
+  background-color: #ae3cff;
+  position: absolute;
+  width: 600px;
+  height: 5px;
+  top: 0;
+  left: 0;
+} */
+
+#bar2::after {
+  width: 50%;
+}
+
+#containerOfBarCharts{
+  margin-top: 35px;
+}
+
+/* Grid Container*/
+.grid-container {
+  display: flex;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .grid-container {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  grid-row-gap: 1rem;
+
+}
+
+.cardItem1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.elementsOV1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.elementsOV2 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.barchart {
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+} */

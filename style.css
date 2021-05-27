@@ -1,0 +1,493 @@
+/* Font */
+@font-face {
+    font-family: Apex;
+    src: url('src/Apex Mk2/ApexMk2-BoldExtended.otf')
+}
+
+@font-face {
+    font-family: Apex_Light;
+    src: url('src/Apex Mk2/ApexMk2-LightCondensed.otf')
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Header */
+#blackBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+#topBarTitle {
+    color: rgb(168, 88, 221);
+    margin-left: 35px;
+    position: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Apex;
+    margin-top: 25px;
+
+}
+
+label {
+    color: white;
+}
+
+select {
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+}
+
+/*Body*/
+body {
+    margin: 0;
+    font: 14px/20px "Lato", Apex_Light, sans-serif;
+    color: #9e9e9e;
+    background-color: #7823b4;
+}
+
+/*Changing Color Background Size*/
+#gradient {
+    min-width: min-content;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*General Wrappers*/
+.wrapper {
+    padding-top: 45px;
+    padding-bottom: 40px;
+}
+
+.wrapper:focus {
+    outline: 0;
+}
+
+
+/*Card Form for OV and Poke Cards*/
+.cardForm {
+    background: white;
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 19px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px #ffffff;
+}
+
+/*Getting the Image Data*/
+.get-data img {
+    height: 250px;
+    margin-left: 20px;
+}
+
+/*Text in HTML*/
+.genDescription {
+    width: 450px;
+    height: 170px;
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: white;
+    font-weight: 100;
+    font-family: "Calibri Light";
+}
+
+.introText {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 30px;
+    color: white;
+    padding-top: 110px;
+    font-family: "Calibri Light";
+    letter-spacing: 1px;
+    line-height: 1.0;
+}
+
+.intro-poke-comparison {
+    padding-top: 0;
+    padding-bottom: 110px;
+}
+
+/* Grid Container*/
+.grid-container {
+    margin-top: 150px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-row-gap: 7rem;
+}
+
+#containerOfBarCharts {
+    margin-top: 35px;
+}
+
+/*BARCHARTS*/
+/*Layout der Barcharts*/
+#barchartGeneration {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#barchartPokemon {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#gen-selector-1 {
+    margin-bottom: 30px;
+}
+
+#gen-selector-2 {
+    margin-bottom: 30px;
+}
+
+/*Overview Stats Elements*/
+.element-card {
+    background: white;
+    width: 300px;
+    border-radius: 19px;
+    box-shadow: -1px 15px 30px -12px #ffffff;
+}
+
+.element-card__unit-stats {
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.element-card__unit-stats:last-child {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.borderBottom {
+    border-bottom: 1.5px solid #ffffff;
+
+}
+
+.element {
+    text-align: left;
+    margin-left: 8px;
+}
+
+.prozentSatz {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.element-card-ov {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.element-card-ov-secondColor {
+    color: #9369ff;
+}
+
+.element-card-elements {
+    font-size: 26px;
+    color: #686af1;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.unit-name2 {
+    color: #eb6464;
+}
+
+.element-card_color {
+    background: #9369ff;
+}
+
+.element-card_color:nth-child(even) {
+    background: #ae3cff;
+}
+
+/*Aussehen Barcharts*/
+.bar {
+    position: relative;
+    background-color: rgb(214, 214, 214);
+    width: 600px;
+    height: 5px;
+}
+
+.background-bar {
+    background-color: #ae3cff;
+    position: absolute;
+    width: 600px;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+
+#bar2::after {
+    width: 50%;
+}
+
+.bar-logo {
+    width: 25px;
+    height: 25px;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+/*Barcharts Containers*/
+.bar-comparison-container {
+    width: 600px;
+    height: 30px;
+    /*border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.barchart-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-container {
+    width: 750px;
+    min-height: 45px;
+    margin: 0.2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.barchart-container .bar-container:nth-child(even) {
+    background-color: transparent;
+    color: rgb(255, 251, 251);
+}
+
+/*Barchart Icon*/
+.iconElementsBarchart {
+    height: 25px;
+    width: 25px;
+}
+
+/*Tooltip für die Barcharts*/
+.ratio {
+    margin-left: 1.5rem;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    right: 100%;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*OVERVIEW TYPES*/
+/*Layout der Overview der Elemente*/
+.elementsOV1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.elementsOV2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+/*Icons Pokemon Types*/
+.wrapperElements {
+    width: 300px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #ffffff;
+    overflow: hidden; /* add this to contain floated children */
+}
+
+.first {
+    width: 30px;
+    float: left; /* add this */
+    /*border: 1px solid red;*/
+}
+
+.second {
+    width: 210px;
+    /*border: 1px solid green;*/
+    float: left; /* add this */
+}
+
+.third {
+    width: 20px;
+    /*border: 1px solid blue;*/
+    float: left; /* add this */
+}
+
+.iconElements {
+    height: 15px;
+    width: 15px;
+    position: center;
+}
+
+/*OVERVIEW POKEMON CARD*/
+/*Layout der Pokemon Card*/
+#cardItem1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#cardItem2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.imgOfPokemon {
+    height: 150%;
+    transform: translateX(-15%) translateY(-15%);
+    width: 150%;
+    border: none;
+}
+
+.cardFormElement {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.cardFormElement_SecondColor {
+    color: #9369ff;
+}
+
+.cardFormName {
+    font-size: 26px;
+    color: #686af1;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.cardFormName_SecondColor {
+    color: #eb6464;
+}
+
+.cardFormDescription {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.cardFormStats_SecondColor {
+    background: #9369ff;
+}
+
+.cardFormStats_SecondColor .one-third {
+    border-right: 2px solid #ffffff;
+}
+
+.cardFormStats {
+    color: white;
+    font-weight: 700;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.cardFormStats .one-third {
+    width: 25%;
+    float: left;
+    padding: 20px 15px;
+}
+
+.cardFormStats sup {
+    position: absolute;
+    bottom: 4px;
+    font-size: 45%;
+    margin-left: 2px;
+}
+
+.cardFormStats .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cardFormStats .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.cardFormStats .no-border {
+    border-right: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.slick-prev {
+    left: 100px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 100px;
+    z-index: 999;
+}
+
+.cardFormImg {
+    position: center;
+    height: 230px;
+    margin-bottom: 35px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    overflow: hidden;
+}
+
+.pokemonBackground {
+    background-position: bottom;
+    background-size: 400px;
+}

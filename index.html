@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Pokemon ivispro">
+    <link rel="icon" href="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Pokemon</title>
+</head>
+<body>
+<div id="gradient">
+    <div>
+        <!-- Header -->
+        <header>
+            <div id="blackBar">
+                <div id="topBarTitle">
+                    Pokemon Data
+                </div>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <div class="introText" align="center">
+            <p>
+                Pokémon was officially founded in 1995 by Satoshi Taijiri and is centered on fictional creatures called
+                "Pokémon".
+                In Pokémon, humans, known as Pokémon Trainers, catch and train Pokémon to battle other Pokémon for sport.
+                Till 2021 we can count eight Pokémon-Generations, which consist of different Pokémons and of different
+                types.
+                For our visualization we used data from the generation one till six.
+                Every generation differs from each other, that's why you can compare the generations with each other. In the
+                comparison you can discover,
+                which generation compared to another generation has more Pokémons of a certain type!
+            </p>
+        </div>
+
+        <!-- Grid Container Start -->
+        <div class="grid-container" align="center">
+
+            <div id="cardItem1">
+                <!-- Auswahl Pokemon -->
+                <label id="label-pokeselector1" for="poke-selector-1">Choose a Pokemon in Generation 1:</label>
+                <br>
+                <select name="gen1" id="poke-selector-1"></select>
+                <!-- Cards -->
+                <div class="slide-container">
+                    <div class="wrapper">
+                        <div class="cardForm">
+                            <div class="cardFormImg pokemonBackground">
+                                <!-- Bild von Pokemon -->
+                                <img class="imgOfPokemon">
+                            </div>
+                            <div class="cardFormElement cardFormElement_SecondColor elementOfPokemon"></div>
+                            <div class="cardFormName nameOfPokemon"></div>
+                            <div class="cardFormDescription descriptionOfPokemon"></div>
+
+                            <div class="cardFormStats cardFormStats_SecondColor clearfix">
+                                <div class="one-third">
+                                    <div class="stat hpOfPokemon"></div>
+                                    <div class="stat-value">HP</div>
+                                </div>
+
+                                <div class="one-third">
+                                    <div class="stat atkOfPokemon"></div>
+                                    <div class="stat-value">ATK</div>
+                                </div>
+
+                                <div class="one-third">
+                                    <div class="stat defOfPokemon"></div>
+                                    <div class="stat-value">DEF</div>
+                                </div>
+
+                                <div class="one-third no-border">
+                                    <div class="stat heightOfPokemon"></div>
+                                    <div class="stat-value">HEIGHT</div>
+                                </div>
+                            </div>
+                        </div> <!-- end cardForm-->
+                    </div> <!-- end wrapper -->
+                </div> <!-- end container -->
+            </div> <!-- end element card -->
+
+            <div id="cardItem2">
+                <!-- Auswahl Pokemon -->
+                <label id="label-pokeselector2" for="poke-selector-2">Choose a Pokemon in Generation 1:</label>
+                <br>
+                <select name="gen1" id="poke-selector-2"></select>
+                <!-- Cards -->
+                <div class="slide-container">
+                    <div class="wrapper">
+                        <div class="cardForm">
+                            <div class="cardFormImg pokemonBackground">
+                                <!-- Bild von Pokemon -->
+                                <img class="imgOfPokemon">
+                            </div>
+                            <div class="cardFormElement cardFormElement_SecondColor elementOfPokemon"></div>
+                            <div class="cardFormName cardFormName_SecondColor nameOfPokemon"></div>
+                            <div class="cardFormDescription descriptionOfPokemon"></div>
+
+                            <div class="cardFormStats cardFormStats_SecondColor clearfix">
+                                <div class="one-third">
+                                    <div class="stat hpOfPokemon"></div>
+                                    <div class="stat-value">HP</div>
+                                </div>
+
+                                <div class="one-third">
+                                    <div class="stat atkOfPokemon"></div>
+                                    <div class="stat-value">ATK</div>
+                                </div>
+
+                                <div class="one-third">
+                                    <div class="stat defOfPokemon"></div>
+                                    <div class="stat-value">DEF</div>
+                                </div>
+
+                                <div class="one-third no-border">
+                                    <div class="stat heightOfPokemon"></div>
+                                    <div class="stat-value">HEIGHT</div>
+                                </div>
+                            </div>
+                        </div> <!-- end cardForm-->
+                    </div> <!-- end wrapper -->
+                </div> <!-- end container -->
+            </div> <!-- end element card -->
+
+            <div class="elementsOV1">
+                <!-- Auswahl Generation -->
+                <label for="gen-selector-1">Choose a Generation:</label>
+                <br>
+                <select name="gen1" id="gen-selector-1"></select>
+                <!-- Generation Description -->
+                <div class="gen1Description genDescription"></div>
+                <!-- Stats Overview Elements Card -->
+                <div id="ov-card1" class="slide-container element-card">
+                    <div class="element-card-ov element-card-ov-secondColor">Overview</div>
+                    <div class="unit-name1 element-card-elements">Elements</div>
+                    <div id="total-gen1"></div>
+                    <div id="overview-container-left"></div>
+                </div>
+            </div> <!-- end overview -->
+
+            <div class="elementsOV2">
+                <label for="gen-selector-2">Choose a Generation:</label>
+                <br>
+                <select name="gen2" id="gen-selector-2"></select>
+                <!-- Generation Description -->
+                <div class="gen2Description genDescription"></div>
+                <!-- Stats Overview Elements Card -->
+                <div id="ov-card2" class="slide-container element-card">
+                    <div class="element-card-ov element-card-ov-secondColor">Overview</div>
+                    <div class="unit-name2 element-card-elements">Elements</div>
+                    <div id="total-gen2"></div>
+                    <div id="overview-container-right"></div>
+                </div>
+            </div> <!-- end overview -->
+
+            <div id="barchartGeneration" class="barchart">
+                <!-- Barcharts -->
+                <div id="barchart-container-generation" class="barchart-container">
+                    <div class="bar-container element-card">
+                        <div class="bar-logo">
+                            <img class="iconElementsBarchart" src="./src/media/icons/water.png">
+                        </div>
+                        <div id="normal" class="bar-comparison-container">
+                            <div class="bar" id="bar1">
+                                <div class="background-bar"></div>
+                            </div>
+                            <div class="bar" id="bar2">
+                                <div class="background-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ratio-container">
+                            <div class="ratio">20%</div>
+                            <div class="ratio">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end barchart1 -->
+
+            <div id="barchartPokemon" class="barchart">
+                <!-- Explanation -->
+                <div class="introText intro-poke-comparison" align="center">
+                    <p>
+                        Here you can discover all the Pokémons of the selected generations and compare them directly to each
+                        other.
+                        Who has more HP, ATK, DEF or which one is taller?
+                    </p>
+                </div>
+                <!-- Barcharts -->
+                <div id="barchart-container-pokemon" class="barchart-container">
+                    <div class="bar-container element-card">
+                        <div class="bar-logo">
+                            <img class="iconElementsBarchart" src="./src/media/icons/atk.png">
+                        </div>
+                        <div id="normal" class="bar-comparison-container">
+                            <div class="bar" id="bar1">
+                                <div class="background-bar"></div>
+                            </div>
+                            <div class="bar" id="bar2">
+                                <div class="background-bar"></div>
+                            </div>
+                        </div>
+                        <div class="ratio-container">
+                            <div class="ratio">20%</div>
+                            <div class="ratio">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid Container End -->
+        </div>
+
+        <!-- GRADIENT BACKGROUND IMPORTED CODE-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="./script.js"></script>
+
+    </div>
+</div>
+</body>
+</html>
