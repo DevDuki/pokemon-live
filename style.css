@@ -130,6 +130,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1rem;
     grid-row-gap: 7rem;
+    overflow: hidden;
 }
 
 #containerOfBarCharts {
@@ -484,7 +485,6 @@ body {
     margin-bottom: 35px;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
-    overflow: hidden;
 }
 
 .pokemonBackground {
